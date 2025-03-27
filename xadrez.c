@@ -1,6 +1,39 @@
 #include <stdio.h>
 
+void moverTorre(int casas) {
+    if (casas > 0) {
+        printf("Torre para Direita\n");
+        moverTorre(casas - 1);
+    }
+}
+
+void moverBispo(int casas) {//precisa ser feito com loop aninhado
+    if (casas > 0) {
+        for (int c = 0; c < casas; c++) {
+            for (int d = 0; d < casas; d++) {
+                printf("Bispo para Direita\n");
+            }
+            printf("Bispo para Cima\n");
+        }
+    }
+}
+
+void moverRainha(int casas) {
+
+}
+
 int main() {
+    printf("=== Movimentação da Torre:\n");
+    moverTorre(5);
+    printf("=== Movimentação do Bispo:\n");
+    moverBispo(5);
+    printf("=== Movimentação da Rainha:\n");
+    moverRainha(8);
+    printf("=== Movimentação do Cavalo:\n");
+    //movimento do cavalo é pra ser recursivo, mas usa loops aninhacos com multiplas variaveis/condicoes
+    return 0;
+
+    /*
     //movimento da torre
     printf("=== Movimento da torre:\n");
     for (int t = 0; t < 5; t++) {
@@ -24,4 +57,5 @@ int main() {
         }
         printf("Cavalo para Esquerda\n");
     }
+    */
 }
