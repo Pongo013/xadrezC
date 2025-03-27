@@ -16,4 +16,12 @@ int main() {
     for (int r = 0; r < 8; r++) {
         printf("Rainha para Esquerda\n");
     }
+    //movimento do cavalo
+    printf("=== Movimento do Cavalo:\n");
+    for (int c = 0; c < 1; c++) {
+        for (c; c < 2; c++) {
+            printf("Cavalo para Baixo\n");
+        }
+        printf("Cavalo para Esquerda\n");
+    }
 }
